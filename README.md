@@ -8,8 +8,8 @@ Currently you have to type the **!latest** command in the channel you want news 
 ## Installation
 This assumes you already have [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/) installed.
 ```
-git clone https://github.com/qtchaos/Postimees-Bot.git
-cd postimees
+git clone https://github.com/qtchaos/Tellija.git
+cd Tellija
 // Create a file named '.env' and place your token inside like so: TOKEN="<YOUR_TOKEN_HERE>"
 pip install -r requirements.txt
 ```
