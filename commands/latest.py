@@ -11,11 +11,14 @@ def latest(data):
     )
 
     if "Postimees" in data[0]["authors"][0]["name"]:
-        article.set_author(
-            name=f"{data[0]['meta']['exclamation']}",
-            url=f"https://www.postimees.ee/author/{data[0]['authors'][0]['id']}",
-            icon_url=f"{data[0]['authors'][0]['thumbnail']['sources']['square']['large']}",
-        )
+        try:
+            article.set_author(
+                name=f"{data[0]['meta']['exclamation']}",
+                url=f"https://www.postimees.ee/author/{data[0]['authors'][0]['id']}",
+                icon_url=f"{data[0]['authors'][0]['thumbnail']['sources']['square']['large']}",
+            )
+        except KeyError:
+            pass
     elif len(data[0]["authors"][0]["name"]) < 6:
         article.set_author(
             name=f"{data[0]['authors'][0]['name']}",
